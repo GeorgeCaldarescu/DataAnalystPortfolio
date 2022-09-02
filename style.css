@@ -1,3 +1,12 @@
+/* 
+Fonts:
+
+font-family: 'Montserrat', sans-serif;
+font-family: 'Oswald', sans-serif;
+
+*/
+
+/* general styling */
 *,
 *::before,
 *::after {
@@ -15,17 +24,453 @@ img {
   max-width: 100%;
 }
 
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: white;
+  background: #a59678;
+  padding: 0.3em 1em;
+  border-radius: 100px;
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 0.75;
+}
+
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  /* added for nav-toggle positioning */
+  position: relative;
+}
+
 header {
-  border: 1px solid red;
+  background: #2e323f;
+  text-align: center;
+}
+.container {
+  width: 80%;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+  /* added for nav-toggle positioning */
+  position: relative;
+}
+.container h1 {
+  text-align: center;
 }
 
-nav {
-  border: 1px solid yellow;
+header {
+  background: #2e323f;
+  text-align: center;
+}
+
+/* style the hamburger menu */
+.nav {
+  width: 100%;
+}
+.nav-toggle {
+  cursor: pointer;
+  border: 0;
+  width: 3.5em;
+  height: 2.5em;
+  padding: 0em;
+  /* border-radius: 50%; */
+  background: #2e323f;
+  color: white;
+  transition: opacity 250ms ease;
+
+  position: absolute;
+  left: 0;
+}
+
+.nav-toggle:focus,
+.nav-toggle:hover {
+  opacity: 0.75;
+}
+
+.hamburger {
+  width: 50%;
+  position: relative;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after {
+  display: block;
+  margin: 0 auto;
+  height: 3px;
+  background: #6f737f;
+}
+
+.hamburger::before,
+.hamburger::after {
+  content: "";
+  width: 100%;
+}
+
+.hamburger::before {
+  transform: translateY(-6px);
+}
+
+.hamburger::after {
+  transform: translateY(3px);
+}
+
+/* create the burger navigation */
+.nav {
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  font-size: 18px;
+  font-family: "Oswald", sans-serif;
+}
+
+.nav--visible {
+  visibility: visible;
+  height: auto;
+  padding-bottom: 1em;
+  position: relative;
+}
+
+.nav__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  /* border: 1px solid yellow; */
+}
+
+.nav__item {
+  margin-top: 0.75em;
+  /* border: 1px solid blue; */
+  /* text-align: center; */
+}
+
+.nav__link {
+  color: #6f737f;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.nav__link--button {
+  padding: 0.25em 0.75em;
+  background: #a59678;
+  border-radius: 100px;
+}
+
+/* focus on nav */
+
+.nav__link:hover,
+.nav__link:focus {
+  opacity: 0.75;
+}
+
+.logo {
+  height: 30px;
+}
+
+.hero {
+  margin: 0;
+  padding-top: 0.1em;
+  padding-bottom: 2em;
+  background: #3b4050;
+  height: 100%;
+}
+
+.hero h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 45px;
+  color: white;
+}
+
+.title__second {
+  color: #a59678;
+}
+
+.hero p {
+  padding-bottom: 1em;
+  color: #6f737f;
+}
+
+.primary-content {
+  background: lightgrey;
   display: flex;
-  justify-content: end;
-  margin-right: 1em;
+  flex-direction: column;
+  align-items: center;
 }
 
-nav a {
-  border: 1px solid green;
+.column {
+  /* border:1px solid green; */
+  width: 80%;
+  text-align: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
+
+.title-section {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+  color: #a59678;
+}
+
+.text-primary {
+  align-items: center;
+  /* border: 1px solid yellow; */
+  width: 80%;
+  font-family: ;
+}
+
+.text-primary {
+  line-height: 1.9;
+}
+
+.main-content {
+  font-family: "Montserrant", sans-serif;
+  font-size: 21px;
+  line-height: 1.6;
+}
+
+.main-content h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 36px;
+  color: #a59678;
+}
+
+.asside {
+  background: #3b4050;
+  color: white;
+  text-align: center;
+  padding: 0.5em;
+  margin-top: 2em;
+  width: 100%;
+  font-family: "Montserrat", sans-serif;
+  font-size: 18px;
+}
+
+.asside h2 {
+  font-family: "Oswald", sans-serif;
+  font-size: 30px;
+}
+
+.asside + .asside {
+  margin-top: 2em;
+}
+
+footer {
+  background: #3b4050;
+  padding: 0.5em;
+  margin-top: 2em;
+  color: white;
+  text-align: center;
+}
+
+.footer h1 {
+  font-family: "Oswald", sans-serif;
+  font-size: 24px;
+}
+
+.about {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #6f737f;
+}
+
+.about h2 {
+  color: #a59678;
+  font-family: "Oswald", sans-serif;
+  font-size: 21px;
+}
+
+.footer-nav h2 {
+  color: #a59678;
+  font-family: "Oswald", sans-serif;
+  font-size: 21px;
+}
+
+.footer__nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.footer-link {
+  font-family: "Montserrat", sans-serif;
+  size: 16x;
+  color: #6f737f;
+  text-decoration: none;
+}
+
+.footer__text {
+  font-family: "Montserrat", sans-serif;
+  font-size: 16px;
+  color: #6f737f;
+}
+
+.footer__text h2 {
+  color: #a59678;
+  font-family: "Oswald", sans-serif;
+  font-size: 21px;
+}
+
+.about-text {
+  font-family: "Montserrat", sans-serif;
+  size: 16x;
+  color: #6f737f;
+}
+
+/* media querry */
+
+@media (min-width: 700px) {
+  .hero__box {
+    display: flex;
+    justify-content: space-between;
+    width: 90%;
+  }
+
+  .hero__title {
+    margin-left: 1.5em;
+    padding-top: 5.75em;
+  }
+
+  .hero h1 {
+    font-size: 45px;
+  }
+
+  .hero__text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-top: 3em;
+    margin-left: 1.5em;
+  }
+
+  .nav-toggle {
+    display: none;
+  }
+
+  .nav__link--button {
+    padding: 0.1em 1.5em;
+  }
+
+  .nav {
+    visibility: visible;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    height: auto;
+    position: relative;
+  }
+
+  .nav__list {
+    display: flex;
+    margin: 0;
+  }
+
+  .nav__item {
+    margin: 0 0 0 1.5em;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .footer-container {
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    border: 2px solid green;
+    margin: 0 auto;
+  }
+
+  .footer-col + .footer-col {
+    margin-left: 2em;
+  }
+
+  .about {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid red;
+    text-align: initial;
+    width: 250%;
+    align-items: initial;
+  }
+
+  .about h2 {
+    color: #a59678;
+    font-family: "Oswald", sans-serif;
+    font-size: 21px;
+  }
+
+  .about-text {
+    text-align: initial;
+    width: 80%;
+    margin: 0;
+    font-size: 15px;
+    line-height: 1.5;
+  }
+
+  .footer-nav {
+    border: 1px solid blueviolet;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .footer-nav h2 {
+    color: #a59678;
+    font-family: "Oswald", sans-serif;
+    font-size: 21px;
+  }
+
+  .footer__nav {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    line-height: 1.5;
+  }
+
+  .nav__item-footer {
+    margin: 0;
+    font-size: 15px;
+  }
+
+  .footer__text {
+    font-family: "Montserrat", sans-serif;
+    font-size: 16px;
+    color: #6f737f;
+    border: 1px solid magenta;
+    width: 100%;
+  }
+
+  .footer__text h2 {
+    color: #a59678;
+    font-family: "Oswald", sans-serif;
+    font-size: 21px;
+    text-align: initial;
+  }
+
+  .footer_text p {
+    line-height: 1.5;
+  }
+}
+
+/* fare il mediaquery per 1000px
+ */
