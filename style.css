@@ -206,6 +206,10 @@ header {
   text-decoration: none;
 }
 
+.link:hover {
+  color: #a59678;
+}
+
 .primary-content {
   background: lightgrey;
   display: flex;
